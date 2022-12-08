@@ -1,0 +1,281 @@
+.body{
+    font-family: "Montserrat";
+    text-align: center;
+}
+/**body这里已经寄定了全文的字体，如果下面依然用这种字体但是不同的weight
+只需要定义weight
+因为出现了一个问题：
+由于重复定义font-family但是是以font-family-weight的格式
+导致字体变成了新罗马，具体原因好不知道，但是最好是所要定义的property
+同样的value只出现一遍*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: "bold";
+}
+.top-heading, .cta-heading {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    text-shadow: -1px 1px 1px grey;
+}
+.testimonial-heading {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: auto 10%;
+}
+.feature-heading, .pricing-heading {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.copyright-text, .pricing-detail {
+    color:#8f8f8f;
+}
+.copyright-text {
+    text-align: center;
+}
+.container-fluid {
+    padding: 7% 15%;
+    text-align: center;
+}
+
+
+
+
+.colored-section {
+    background-color:#827397;
+    color: white;
+} 
+
+/**#title{
+    padding:3% 15% 7%;
+    text-align: left;
+}
+*/
+.white-section {
+    background-color: white;
+    color: black;
+}
+
+/*problem
+#title .class or #title.class are not working
+but for features cta press they r working
+colored-section alone doesnt appy ro the title
+
+solved
+typo
+*/
+
+
+
+
+/*
+.class1 .class2
+包含在class1里面的class2的那个div
+.class1.class2
+一个又是class1又是class2的div
+selector1.class1.class2
+一个又是class1又是class2的selector 是selector1的div
+*/
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+.navbar-brand {
+    font-family:"Ubuntu";
+    font-weight:bold;
+    font-size: 2.5rem;
+}
+.nav-items {
+    padding: 0 18px;
+}
+.nav-link {
+    font-weight: light;
+    font-size: 1.2rem;
+
+}
+
+
+
+
+
+
+#features {
+    padding: 5rem 8rem;
+    margin-top:0;
+    position: relative;
+}
+.feature-icon {
+    color: #EF8071;
+    font-size: 3rem;
+    margin-bottom: 5%;
+}
+.feature-icon:hover {
+    color:#ff4c68;
+}
+.feature-item {
+    text-align: center;
+    padding: 3rem;
+}
+
+
+
+
+
+
+#testimonials {
+    text-align: center;
+    color: white;
+}
+
+
+
+
+.press-logo {
+    width: 20%;
+    margin: 10px 10px 50px;
+}
+
+
+
+
+.pricing-col {
+    padding:1rem;
+}
+
+.card {
+    height:100%;
+    text-align: center;
+}
+
+
+
+
+
+#cta {
+    color: white;
+    text-align: center;
+}
+
+
+
+
+.footer-icon-container {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.footer-icon {
+    margin-left:10px;
+}
+
+
+
+
+.download-btn {
+    margin: 5% 3% 5% 0;
+}
+
+.download-brand-icon  {
+    margin-right: 5px;
+}
+.dog-image, .lady-image {
+    width: 10%;
+    border-radius:100%;
+    margin:20px;
+}
+.title-image {
+    width:25%;
+    transform: rotate(25deg);
+    /* 顺时针旋转 */
+    position: absolute;
+    right:20%;
+} 
+@media (max-width:1028px) {
+    .title-image {
+        transform: rotate(0deg);
+        margin-left: 0;
+        position: static;
+        width:70%;
+    } 
+
+    #title {
+        text-align: center;
+    }
+}
+/*if font-family-weight format is not wroking, better use 900 as black*/
+
+
+
+
+/* testimonials */
+
+
+
+
+
+
+
+/**同级关系的距离用margin解决
+子母级的之间的关系用padding解决
+**/
+
+
+/**Bruuuuuhhhhhhhhhhhhhhh
+media query only works when the original selector is above the media query
+The Orderrr does matter !!!!!!!
+***/
+
+
+
+
+
+
+
+/**new probelm
+when the child image is positioned absolute, 
+its 60% width is not related to the 60% of the parent layer anymore
+its related to the root layer which is the body
+but angela yu made absolute position and 60% at the same time while not screwing everything up
+???
+**/
+
+
+
+
+
+
+/**to chnage what the position of the y index, 
+we dont alway nedd to change the z-index property
+there are few other thing that affect the z coordiantion position
+
+1. later over earlier(the default flow of html
+2. position over unpositioned 
+3. child layer over parent layer
+4. the next parent layer is actully under the child layer of the eaarlier 
+    parent layer, so here we alonly need to position the later layer to make
+    go over the child of the fronter parent layer**/
+
+
+
+/**就z轴而言padding是依然属于当前layer的
+而margin不属于，因为mrgin是border之外**/
+
+
+
+/*bootstrap
+1. Navbar，通过bootstrp里的既定元素来target一些element，实现下拉drop down，collapse，bar fixedtop等功能，
+2. Grid layout，通过col和row的class，来帮助页面的布局响应式的反应，在不同的设备（电脑，手机，平板）上的不同布局
+   col被包含在row的div中
+3. container,尤其是container-fluid， 对页面有很强的响应度，总是会占满页面的宽度。
+4. carousel，像幻灯片一样，用户可以滑动元素。
+5. card.就像一个小型的html文件，可以在有限的空间里面装在足够的信息，且不需要复杂的css排版，
+   一般用display flex，card默认就是占满宽度。
+   card里面一般主要有body title button 以及很多inline style，主要也是header body footer。
+
+
+
+CSS:
+1. z-index
+2. Media Query: Media <type> <feature>
+*/

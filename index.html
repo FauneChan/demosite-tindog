@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Demo Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- bootstrap css -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <!-- bootttrp js -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <script src="https://kit.fontawesome.com/d7e835234d.js" crossorigin="anonymous"></script>
+   <!-- awesome fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">  <!-- google fonts -->
+
+   <!--bootstrap css must be on our own css
+网页出现点击则出现其他内容的功能需要JavaScript的支持
+这里的script tag则是JavaScript
+-->
+
+<!--Responsiveness指的不是反应速度，更多的是响应，响应不同的设备、页面等-->
+
+</head>
+
+<body>
+
+<section id="title" class="colored-section">
+  <div class="container-fluid">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" style="font-family: 'Ubuntu';" href="">tindog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-items">
+                  <a class="nav-link" href="#footer">Contact</a>
+              </li>
+              <li class="nav-items">
+                  <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-items dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Download</a>
+                  <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Windows</a></li>
+              <li><a class="dropdown-item" href="#">MacOS</a></li>
+              <li><a class="dropdown-item" href="#">Mobile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Home</a></li>
+            </ul>
+              </li>
+          </ul>
+    </div>
+    </nav>
+
+
+
+    <!-- Title -->
+    <div class="row">
+
+      <div class="col-lg-6">
+        <h1 class="top-heading">Meet new and interesting dogs nearby.</h1>
+        <button type="button" class="btn btn-dark btn-lg download-btn"><i class="download-brand-icon fa-brands fa-apple"></i>Download</button>
+        <button type="button" class="btn btn-outline-dark btn-lg download-btn"><i class="download-brand-icon fa-brands fa-google-play"></i>Download</button>
+      </div>
+      <div class="col-lg-6">
+        <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Features -->
+
+  <section id="features" class="row container-fluid white-section">
+
+    <div class="feature-item col-lg-4">
+    <i class="feature-icon fa-solid fa-circle-check"></i>
+    <h3 class="feature-heading">Easy to use.</h3>
+    <p>So easy to use, even your dog could do it.</p>
+    </div>
+
+    <div class="feature-item col-lg-4">
+    <i class="feature-icon fa-solid fa-bullseye"></i>
+    <h3 class="feature-heading">Elite Clientele</h3>
+    <p>We have all the dogs, the greatest dogs.</p>
+    </div>
+
+    <div class="feature-item col-lg-4">
+    <i class="feature-icon fa-solid fa-heart"></i>
+    <h3 class="feature-heading">Guaranteed to work.</h3>
+    <p>Find the love of your dog's life or your money back.</p>
+  </div>
+  
+
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials" class="container-fluid colored-section">
+    
+    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+  <!--The data-ride="carousel" attribute is used to 
+mark a carousel as animating starting at page load.
+顾名思义就是网页加载即播放幻灯片
+也就是自动滑动
+
+data-ride:carousel自动播放
+data-ride:true：用户手动播放第一个然后自动播放
+data-ride:false：不播放 （默认选项）
+    所以可以不设自动播放，关闭自动，通过添加controls来达到手动滑动的效果
+    data-pause="hover"是默认选项-->
+
+<!--class= carousel slide. carousel是一个，其次slide也是另一个class，
+slide的作用是效果，滑动效果
+没有slide的carousel是只有变化而没有效果的
+
+
+-->  
+    
+<div class="carousel-inner">
+<!--如果把上面这一div删除，幻灯片同样会滑动，
+但是每一个slide都会相当于一个独立的页面，
+删除后内容滑动会导致网页下方的内容range的进度条重复的滑动
+因为每一张内容被当成个体，inner可以解决这个问题-->
+
+
+    <div class="container-fluis carousel-item active">
+        <!--active是必须的-->
+        <h2 class="testimonial-heading">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+    <img class="dog-image" src="images/dog-img.jpg" alt="dog-profile">
+    <em>Pebbles, New York</em><!--内容在这-->
+    </div>
+
+
+    <div class="carousel-item">
+      <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+    <img class="lady-image" src="images/lady-img.jpg" alt="lady-profile">
+    <em>Beverly, Illinois</em>
+    </div>
+ </div> 
+  
+  <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<!--这是一个按钮，是左边的按钮（pre），
+这个按钮的运作只影响carouselwithcontrols这个id，（href）
+data-bs-target也是要来自同一个id
+role是button，因为a tag可以是任何东西，这里是一个按钮
+这个轮播是从右往左的，因为 data-slide是pre
+carousel-control-prev-icon是按钮的的图标
+aria-hidden 属性可以用来控制一系列可访问API中的非交互内容的显示或隐藏。
+An application programming interface (API) 
+is a way for two or more computer programs to communicate with each other
+-->
+    
+
+    
+    <!--这里的selector是button本身，也可以用anchor <a role=button>来实现
+    但是 用<a>的话，必须有href链接与最开始div的id完全一致-->
+    
+    <!--href 和 data-bs-target 都要只想母div的id-->
+    <span class="visually-hidden">Previous</span>
+    <!--visually hidden和sr-only的区别还是？？？-->
+  </a> 
+  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section id="press" class="container-fluid colored-section">
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing" class="container-fluid white-section">
+
+    <h2 class="pricing-heading">A Plan for Every Dog's Needs</h2>
+    <p class="pricing-description">Simple and affordable price plans for your and your dog.</p>
+
+<div class="row ">
+
+<!--here I used row instead of card-deack
+cz Card-deck not working with its wrapping function
+
+updatiom: card-deck has been replaced by card-group-->
+
+
+    <div class="pricing-col col-lg-4 col-md-6 col-sm-12">
+      <div class="card">
+      <div class="card-header">
+        <h3>Chihuahua</h3>
+      </div>
+      <div class="card-body">
+        <h2>Free</h2>
+        <p>5 Matches Per Day</p>
+        <p>10 Messages Per Day</p>
+        <p>Unlimited App Usage</p>
+        <p style="visibility:hidden;">Invisible Text</p>
+        <button type="button" class="btn col-12 btn-outline-dark">Sign Up for free</button>
+      </div>
+    </div>
+    </div>
+
+<!--btn-block的100% width的bootstrap属性在新的版本中已经没用了
+用w-100%，d-block都没有用，
+唯一能用的就是col-12-->
+
+    <div class="pricing-col col-lg-4 col-md-6 col-sm-12">
+      <div class="card">
+      <div class="card-header">
+        <h3>Labrador</h3>
+      </div>
+      <div class="card-body">
+        <h2>$49 / mo</h2>
+        <p class="pricing-detail">Unlimited Matches</p>
+        <p class="pricing-detail">Unlimited Messages</p>
+        <p class="pricing-detail">Unlimited App Usage</p>
+        <p style="visibility:hidden;">Invisible Text</p>
+        <button type="button" class="btn col-12 btn-dark">Get Started</button>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="pricing-col col-lg-4 col-md-12 col-sm-12">
+      <div class="card">
+      <div class="card-header">
+        <h3>Mastiff</h3>
+      </div>
+      <div class="card-body">
+        <h2>$99 / mo</h2>
+        <p class="pricing-detail">Pirority Listing</p>
+        <p class="pricing-detail">Unlimited Matches</p>
+        <p class="pricing-detail">Unlimited Messages</p>
+        <p class="pricing-detail">Unlimited App Usage</p>
+        <button type="button" class="btn col-12 btn-dark">Contact Us</button>
+      </div>
+    </div>
+    </div>
+
+  
+  </div>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta" class="container-fluid colored-section">
+    <h1 class="cta-heading">Find the True Love of Your Dog's Life Today.</h1>
+    <button type="button" class="btn btn-dark btn-lg download-btn"><i class="fa-brands fa-apple download-brand-icon"></i>Download</button>
+    <button type="button" class="btn btn-outline-dark btn-lg download-btn"><i class="fa-brands fa-google-play download-brand-icon"></i>Download</button>
+  </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer" class="white-section">
+
+    <div class="footer-icon-container">
+    <i class="footer-icon fa-brands fa-twitter"></i>
+    <i class="footer-icon fa-brands fa-facebook"></i>
+    <i class="footer-icon fa-brands fa-instagram"></i>
+    <i class="footer-icon fa-solid fa-envelope"></i>
+  </div>
+
+    <p class="copyright-text">© Copyright TinDog</p>
+
+  </footer>
+
+
+</body>
+
+</html>
+
+
+<!--在html中，是有x，y，z轴的，x y轴是上下左右的关系，可以用display position corrdinate 来实现
+而z轴视觉上不容易看见，按照默认的来说，html写在越后面的元素则在y轴上越覆盖写在上面的元素
+默认的是：子级别覆盖母级别，后永远覆盖前面的
+在此基础上
+所有的layer都是z-index为0
+可以通过改变z-index 1 -1 来对当前层进行z轴的上下移动
+子级别的层面的改变只有在母级别有position property的时候才会生效
+-->
